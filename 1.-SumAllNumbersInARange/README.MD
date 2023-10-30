@@ -1,4 +1,4 @@
-### Sum All numbers in a Range
+# Sum All numbers in a Range
 
 ## Description
 
