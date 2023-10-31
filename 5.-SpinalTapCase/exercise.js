@@ -1,9 +1,15 @@
 function spinalCase(str) {
-  
-  let regexUpper = new RegExp(/([a-z][A-Z])/gm);
-  data = regexUpper.exec(str);
-  console.log(data);
-    str = str.replace(/([_\s])/gm, "-");
+  let regexUpper = /([a-z][A-Z])/gm;
+  regex = [];
+  let result = [];
+  do {
+    result = regexUpper.exec(str);
+    if (result !== null ) {
+      find = result.shift();
+      str = str.replace(find, find[0]+"-"+find[1]);
+    }
+  } while (result !== null)
+  str = str.replace(/([_\s])/gm, "-");
 
   return str.toLowerCase();
 }
